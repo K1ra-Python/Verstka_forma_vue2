@@ -1,0 +1,161 @@
+$button-text: rgba(255, 255, 255, 0.6)
+$button: rgba(255, 255, 255, 0.05)
+$font-family: "Roboto Mono", sans-serif
+$second-family: "Roboto Flex", sans-serif
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap')
+@mixin button-styles
+    border: 2px solid #1e5946
+    border-radius: 5px
+    padding: 12px 47px 12px 13px
+    width: 353px
+    height: 25px
+
+@mixin second_text
+    font-family: $font-family
+    font-style: italic
+    font-weight: 400
+    font-size: 16px
+    color: $button-text
+
+body
+    background: #171717
+    background-image: url('src/Group 3.png')
+    background-repeat: no-repeat
+    background-position: center
+    padding: 0
+    margin: 0
+    font-family: $second-family
+    font-weight: 400
+    font-size: 20px
+    color: #fff
+    input
+        background: $button
+        @include button-styles
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        color: rgba(255, 255, 255, 0.9)
+
+input::placeholder
+    @include second_text
+
+label
+    @include second_text
+
+.wrap
+    display: flex
+    justify-content: center
+    padding-top: 3%
+.forma_main
+    display: flex
+    justify-content: center
+
+.up_panel
+    display: flex
+    align-items: flex-end
+    width: 577px
+    height: 75px
+
+.you_are
+    border-left: 3px solid #1e5946
+    border-right: 3px solid #1e5946
+    border-top: 3px solid #1e5946
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    width: 167px
+    height: 75px
+
+.youre_adress
+    border-bottom: 3px solid #1e5946
+    border-top: 3px solid #1e5946
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    width: 231px
+    height: 54px
+
+.youre_passport
+    border: 3px solid #1e5946
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    width: 163px
+    height: 54px
+
+.forma_main
+    display: flex
+    flex-direction: column
+.forma
+    border-bottom: 3px solid #1e5946
+    border-left: 3px solid #1e5946
+    border-right: 3px solid #1e5946
+    padding: 51px 29px
+    width: 509px
+    height: 656px
+
+.three_buttons
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-direction: column
+    gap: 30px
+    div
+        display: flex
+        flex-direction: column
+
+.two_buttons
+    margin-top: 7%
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    gap: 20px
+    input
+        width: 195px
+
+.form_text
+    @include button-styles
+    width: 195px
+    height: 22px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-direction: row
+
+.multiselect_block
+    select
+        background: rgba(30, 89, 70, 0.1)
+        padding: 19px 21px 19px 33px
+
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        flex-direction: column
+
+        border: none
+        overflow-y: clip
+        option
+            @include second_text
+
+.client_group,.attending_physician
+    display: flex
+    flex-direction: column
+.attending_physician
+    select
+        width: 195px
+        @include button-styles
+        height: 50px
+        background: $button
+        @include second_text
+
+.two_select_buttons
+    @include second_text
+    width: 514px
+    margin-top: 7%
+    display: flex
+    justify-content: space-between
+    flex-direction: row
