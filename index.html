@@ -32,7 +32,7 @@
                 <div class="three_buttons">
                     <div class="youre_name">
                         <label for="name">Ваше Имя</label>
-                        <input type="text" id="name" v-validate="'required|email'" name="name" placeholder="Введите ваше имя">
+                        <input type="text" id="name" v-validate="'required'" name="name" placeholder="Введите ваше имя">
                         <span>{{ errors.first('name') }}</span>
                     </div>
                     <div class="youre_surname">
