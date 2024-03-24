@@ -12,7 +12,6 @@ var app = new Vue({
         },
         changeActiveButton: {
             'border-bottom':'none',
-            'width': '231px',
             'height': '75px',
         },
         selectedOptions: []
