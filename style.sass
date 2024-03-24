@@ -22,6 +22,7 @@ body
     background-image: url('src/Group 3.png')
     background-repeat: no-repeat
     background-position: center
+    background-attachment: fixed
     padding: 0
     margin: 0
     font-family: $second-family
@@ -45,7 +46,7 @@ label
 .wrap
     display: flex
     justify-content: center
-    padding-top: 3%
+    padding-top: 1%
 .forma_main
     display: flex
     justify-content: center
@@ -58,6 +59,7 @@ label
 
 .you_are
     border-left: 3px solid #1e5946
+    border-bottom: 3px solid #1e5946
     border-right: 3px solid #1e5946
     border-top: 3px solid #1e5946
     display: flex
@@ -65,11 +67,13 @@ label
     justify-content: center
     flex-direction: row
     width: 167px
-    height: 75px
+    height: 54px
 
 .youre_adress
     border-bottom: 3px solid #1e5946
     border-top: 3px solid #1e5946
+    border-right: 3px solid #1e5946
+    border-left: 3px solid #1e5946
     display: flex
     align-items: center
     justify-content: center
@@ -78,7 +82,10 @@ label
     height: 54px
 
 .youre_passport
-    border: 3px solid #1e5946
+    border-right: 3px solid #1e5946
+    border-left: 3px solid #1e5946
+    border-bottom: 3px solid #1e5946
+    border-top: 3px solid #1e5946
     display: flex
     align-items: center
     justify-content: center
@@ -90,19 +97,20 @@ label
     display: flex
     flex-direction: column
 .forma
+    display: flex
+    flex-direction: column
     border-bottom: 3px solid #1e5946
     border-left: 3px solid #1e5946
     border-right: 3px solid #1e5946
     padding: 51px 29px
-    width: 509px
-    height: 656px
+    width: 513px
 
-.three_buttons
+.three_buttons,.six_buttons,.five_buttons
     display: flex
     align-items: center
     justify-content: flex-start
     flex-direction: column
-    gap: 30px
+    gap: 20px
     div
         display: flex
         flex-direction: column
@@ -128,34 +136,67 @@ label
 
 .multiselect_block
     select
-        background: rgba(30, 89, 70, 0.1)
-        padding: 19px 21px 19px 33px
-
+        width: 100%
         display: flex
-        align-items: flex-start
-        justify-content: flex-start
+        align-items: center
+        justify-content: space-between
         flex-direction: column
-
         border: none
         overflow-y: clip
+        height: 90px
         option
             @include second_text
+            color: black
+            margin: 0% 2% 0% 2%
 
 .client_group,.attending_physician
     display: flex
     flex-direction: column
 .attending_physician
     select
-        width: 195px
         @include button-styles
+        @include second_text
+        width: 259px
         height: 50px
         background: $button
-        @include second_text
+        option
+            color: black
 
 .two_select_buttons
     @include second_text
-    width: 514px
     margin-top: 7%
     display: flex
-    justify-content: space-between
+    justify-content: center
     flex-direction: row
+    gap: 20px
+
+.choose_gender
+    @include second_text
+    display: flex
+    margin-top: 5%
+    justify-content: start
+    gap: 15px
+    font-size: 16px
+
+.genders
+    display: flex
+    flex-direction: column
+    input
+        width: 17px
+        accent-color: #1E5946
+        border: none
+    div
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+        gap: 3px
+
+.check_sms
+    margin-top: 3%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    input
+        width: 21px

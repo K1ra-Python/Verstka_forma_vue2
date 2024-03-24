@@ -4,6 +4,7 @@ body {
   background-image: url("src/Group 3.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   padding: 0;
   margin: 0;
   font-family: "Roboto Flex", sans-serif;
@@ -43,7 +44,7 @@ label {
 .wrap {
   display: flex;
   justify-content: center;
-  padding-top: 3%;
+  padding-top: 1%;
 }
 
 .forma_main {
@@ -60,6 +61,7 @@ label {
 
 .you_are {
   border-left: 3px solid #1e5946;
+  border-bottom: 3px solid #1e5946;
   border-right: 3px solid #1e5946;
   border-top: 3px solid #1e5946;
   display: flex;
@@ -67,12 +69,14 @@ label {
   justify-content: center;
   flex-direction: row;
   width: 167px;
-  height: 75px;
+  height: 54px;
 }
 
 .youre_adress {
   border-bottom: 3px solid #1e5946;
   border-top: 3px solid #1e5946;
+  border-right: 3px solid #1e5946;
+  border-left: 3px solid #1e5946;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +86,10 @@ label {
 }
 
 .youre_passport {
-  border: 3px solid #1e5946;
+  border-right: 3px solid #1e5946;
+  border-left: 3px solid #1e5946;
+  border-bottom: 3px solid #1e5946;
+  border-top: 3px solid #1e5946;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,22 +104,23 @@ label {
 }
 
 .forma {
+  display: flex;
+  flex-direction: column;
   border-bottom: 3px solid #1e5946;
   border-left: 3px solid #1e5946;
   border-right: 3px solid #1e5946;
   padding: 51px 29px;
-  width: 509px;
-  height: 656px;
+  width: 513px;
 }
 
-.three_buttons {
+.three_buttons, .six_buttons, .five_buttons {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
-.three_buttons div {
+.three_buttons div, .six_buttons div, .five_buttons div {
   display: flex;
   flex-direction: column;
 }
@@ -144,14 +152,14 @@ label {
 }
 
 .multiselect_block select {
-  background: rgba(30, 89, 70, 0.1);
-  padding: 19px 21px 19px 33px;
+  width: 100%;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
   border: none;
   overflow-y: clip;
+  height: 90px;
 }
 .multiselect_block select option {
   font-family: "Roboto Mono", sans-serif;
@@ -159,6 +167,8 @@ label {
   font-weight: 400;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
+  color: black;
+  margin: 0% 2% 0% 2%;
 }
 
 .client_group, .attending_physician {
@@ -167,19 +177,22 @@ label {
 }
 
 .attending_physician select {
-  width: 195px;
   border: 2px solid #1e5946;
   border-radius: 5px;
   padding: 12px 47px 12px 13px;
   width: 353px;
   height: 25px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.05);
   font-family: "Roboto Mono", sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
+  width: 259px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.attending_physician select option {
+  color: black;
 }
 
 .two_select_buttons {
@@ -188,11 +201,52 @@ label {
   font-weight: 400;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  width: 514px;
   margin-top: 7%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
+  gap: 20px;
+}
+
+.choose_gender {
+  font-family: "Roboto Mono", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  margin-top: 5%;
+  justify-content: start;
+  gap: 15px;
+  font-size: 16px;
+}
+
+.genders {
+  display: flex;
+  flex-direction: column;
+}
+.genders input {
+  width: 17px;
+  accent-color: #1E5946;
+  border: none;
+}
+.genders div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.check_sms {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.check_sms input {
+  width: 21px;
 }
 
 /*# sourceMappingURL=style.css.map */

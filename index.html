@@ -14,17 +14,17 @@
     <div class="wrap" id="app">
         <div class="forma_main">
             <div class="up_panel">
-                <div class="you_are">
+                <div class="you_are" @click="switchForma('you'); selectStyle('you')" :style="activeButtonStyles.you ? changeActiveButton : {}">
                     Вы
                 </div>
-                <div class="youre_adress">
+                <div class="youre_adress" @click="switchForma('adress'); selectStyle('adress')" :style="activeButtonStyles.adress ? changeActiveButton : {}">
                     Ваш адрес
                 </div>
-                <div class="youre_passport">
+                <div class="youre_passport" @click="switchForma('passport'); selectStyle('passport')" :style="activeButtonStyles.passport ? changeActiveButton : {}">
                     Ваш паспорт
                 </div>
             </div>
-            <div class="forma">
+            <div class="forma" v-show="activeForma === 'you'">
                 <div class="three_buttons">
                     <div class="youre_name">
                         <label for="name">Ваше Имя</label>
@@ -57,7 +57,7 @@
                                 v-model="selectedOptions">
                                 <option value="OMC">ОМС</option>
                                 <option value="VIP">VIP</option>
-                                <option value="Problem">Проблемные</option>
+                                <option value="Проблемные">Проблемные</option>
                             </select>
                         </div>
 
@@ -68,6 +68,78 @@
                             <option value="doctor1">Захарова</option>
                             <option value="doctor2">Иванов</option>
                             <option value="doctor3">Чернышёва</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="choose_gender">
+                    <span>Ваш пол</span>
+                    <div class="genders">
+                        <div class="male">
+                            <input type="radio" value="male" name="gender">
+                            <label for="male">Мужчина</label>
+                        </div>
+                        <div class="female">
+                            <input type="radio" value="female" name="gender">
+                            <label for="female">Женщина</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="check_sms">
+                    <label for="SMS">Не отправлять СМС</label>
+                    <input type="checkbox" name="SMS">
+                </div>
+            </div>
+            <div class="forma" v-show="activeForma === 'adress'">
+                <div class="six_buttons">
+                    <div class="youre_index">
+                        <label for="index">Ваш индекс</label>
+                        <input type="text" id="index" name="index" placeholder="Введите ваш индекс">
+                    </div>
+                    <div class="youre_country">
+                        <label for="country">Ваша страна</label>
+                        <input type="text" id="country" name="country" placeholder="Введите вашу страну">
+                    </div>
+                    <div class="youre_oblast">
+                        <label for="oblast">Ваша область</label>
+                        <input type="text" id="oblast" name="oblast" placeholder="Введите вашу область">
+                    </div>
+                    <div class="youre_oblast">
+                        <label for="oblast">Ваш дом</label>
+                        <input type="text" id="oblast" name="oblast" placeholder="Введите номер дома">
+                    </div>
+                    <div class="youre_oblast">
+                        <label for="oblast">Ваш город</label>
+                        <input type="text" id="oblast" name="oblast" placeholder="Введите ваш город">
+                    </div>
+                    <div class="youre_street">
+                        <label for="street">Ваша улица</label>
+                        <input type="text" id="street" name="street" placeholder="Введите вашу улицу">
+                    </div>
+                </div>
+            </div>
+            <div class="forma" v-show="activeForma === 'passport'">
+                <div class="five_buttons">
+                    <div class="youre_series">
+                        <label for="series">Ваша серия паспорта</label>
+                        <input type="text" id="series" name="series" placeholder="Введите вашу серию паспорта">
+                    </div>
+                    <div class="number_pass">
+                        <label for="number_pass">Ваша номер паспорта</label>
+                        <input type="text" id="number_pass" name="number_pass" placeholder="Введите номер вашего паспорта">
+                    </div>
+                    <div class="by_issued">
+                        <label for="by_issued">Кем выдан паспорт</label>
+                        <input type="text" id="by_issued" name="by_issued" placeholder="Введите кем выдан паспорт">
+                    </div>
+                    <div class="when_issued">
+                        <label for="when_issued">Введите дату выдачи</label>
+                        <input type="date" id="date" name="when_issued">
+                    </div>
+                    <div class="attending_physician">
+                        <select id="select-1" class="field_select" name="technology">
+                            <option value="doctor1">Паспорт</option>
+                            <option value="doctor2">Свидетельство о рождении</option>
+                            <option value="doctor3">Вод. Удостоверение</option>
                         </select>
                     </div>
                 </div>
