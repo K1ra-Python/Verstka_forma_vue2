@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
+    <script src="https://unpkg.com/vee-validate@<3.0.0"></script>
     <title>Document</title>
 </head>
 
@@ -24,13 +26,13 @@
                     Ваш паспорт
                 </div>
             </div>
-            <form @submit.prevent="submitForm">
             <div class="forma" v-show="activeForma === 'you'">
                 <div class="three_buttons">
                     <div class="youre_name">
                         <label for="name">Ваше Имя</label>
-                        <input type="text" id="name" name="name" v-validate="'required|alpha'" placeholder="Введите ваше имя">
-                        <span>{{error.first('name')}}</span>
+                        <input type="text" id="name" v-validate="'required|aplpha'" name="name" placeholder="Введите ваше имя">
+                        <span>{{ errors.first('name') }}</span>
+
                     </div>
                     <div class="youre_surname">
                         <label for="surname">Ваша Фамилия</label>
@@ -146,11 +148,12 @@
                     </div>
                 </div>
             </div>
-            </form>
         </div>
     </div>
     <script src="node_modules/vue/dist/vue.js"></script>
-    <script type="module" src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
+    <script src="https://unpkg.com/vee-validate@<3.0.0"></script>
+    <script src="index.js"></script>
 
 </body>
 

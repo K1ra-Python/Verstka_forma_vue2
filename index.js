@@ -3,6 +3,7 @@ import VeeValidate from 'vee-validate';
 
 Vue.use(VeeValidate);
 
+
 var app = new Vue({
     el: '#app',
     data: {
