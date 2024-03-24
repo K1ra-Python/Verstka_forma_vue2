@@ -1,4 +1,4 @@
-
+Vue.use(VeeValidate); // good to go.
 var app = new Vue({
     el: '#app',
     data: {

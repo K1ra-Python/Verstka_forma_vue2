@@ -7,10 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
+
+  <!-- unpkg -->
+  <script src="https://unpkg.com/vee-validate@<3.0.0"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <input v-validate="'required|email'" name="email" type="text">
+    <span>{{ errors.first('email') }}</span>
+
     <div class="wrap" id="app">
         <div class="forma_main">
             <div class="up_panel">
@@ -147,6 +154,10 @@
         </div>
     </div>
     <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
+
+  <!-- unpkg -->
+  <script src="https://unpkg.com/vee-validate@<3.0.0"></script>
     <script src="index.js"></script>
 
 </body>
