@@ -24,11 +24,13 @@
                     Ваш паспорт
                 </div>
             </div>
+            <form @submit.prevent="submitForm">
             <div class="forma" v-show="activeForma === 'you'">
                 <div class="three_buttons">
                     <div class="youre_name">
                         <label for="name">Ваше Имя</label>
-                        <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+                        <input type="text" id="name" name="name" v-validate="'required|alpha'" placeholder="Введите ваше имя">
+                        <span>{{error.first('name')}}</span>
                     </div>
                     <div class="youre_surname">
                         <label for="surname">Ваша Фамилия</label>
@@ -144,10 +146,11 @@
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     </div>
     <script src="node_modules/vue/dist/vue.js"></script>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 
 </body>
 

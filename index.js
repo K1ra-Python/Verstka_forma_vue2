@@ -1,3 +1,7 @@
+import Vue from 'vue';
+import VeeValidate from 'vee-validate';
+
+Vue.use(VeeValidate);
 
 var app = new Vue({
     el: '#app',
@@ -26,7 +30,8 @@ var app = new Vue({
                 this.activeButtonStyles[key] = false
             }
             this.activeButtonStyles[buttonKey] = true
-        }
+        },
+        
     },
     computed: {
         selectedLabels() {
