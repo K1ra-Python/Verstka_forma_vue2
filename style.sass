@@ -173,6 +173,9 @@ label
     justify-content: center
     flex-direction: row
     gap: 20px
+    span
+        @include second_text
+        
 
 .choose_gender
     @include second_text
@@ -181,7 +184,8 @@ label
     justify-content: start
     gap: 15px
     font-size: 16px
-
+    span
+        @include second_text
 .genders
     display: flex
     flex-direction: column

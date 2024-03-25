@@ -212,6 +212,13 @@ label {
   flex-direction: row;
   gap: 20px;
 }
+.two_select_buttons span {
+  font-family: "Roboto Mono", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
 
 .choose_gender {
   font-family: "Roboto Mono", sans-serif;
@@ -224,6 +231,13 @@ label {
   justify-content: start;
   gap: 15px;
   font-size: 16px;
+}
+.choose_gender span {
+  font-family: "Roboto Mono", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .genders {
