@@ -24,12 +24,12 @@ body input {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   body input {
     width: 200px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   body {
     font-size: 14px;
   }
@@ -62,7 +62,7 @@ label {
   justify-content: center;
   width: 600px;
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .forma_main {
     width: 100%;
   }
@@ -155,7 +155,7 @@ label {
 .two_buttons input {
   width: 195px;
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .two_buttons {
     flex-direction: column;
   }
@@ -174,7 +174,7 @@ label {
   justify-content: flex-start;
   flex-direction: row;
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .form_text {
     width: 200px;
   }
@@ -220,7 +220,7 @@ label {
   height: 50px;
   background: rgba(255, 255, 255, 0.05);
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .attending_physician select {
     width: 200px;
   }
@@ -241,7 +241,7 @@ label {
   flex-direction: row;
   gap: 20px;
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .two_select_buttons {
     flex-direction: column;
   }
