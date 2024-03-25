@@ -12,6 +12,11 @@ body {
   font-size: 20px;
   color: #fff;
 }
+body span {
+  font-size: 12px;
+  font-weight: 600;
+  color: red;
+}
 body input {
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid #1e5946;
@@ -241,6 +246,13 @@ label {
   flex-direction: row;
   gap: 20px;
 }
+.two_select_buttons span {
+  font-family: "Roboto Mono", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
 @media (max-width: 600px) {
   .two_select_buttons {
     flex-direction: column;
@@ -258,6 +270,13 @@ label {
   justify-content: start;
   gap: 15px;
   font-size: 16px;
+}
+.choose_gender span {
+  font-family: "Roboto Mono", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .genders {

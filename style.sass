@@ -41,6 +41,10 @@ body
     font-weight: 400
     font-size: 20px
     color: #fff
+    span
+        font-size: 12px
+        font-weight: 600
+        color: red
     input
         background: $button
         @include button-styles
@@ -191,6 +195,9 @@ label
     justify-content: center
     flex-direction: row
     gap: 20px
+    span
+        @include second_text
+        
     @include mobila
         flex-direction: column
 .choose_gender
@@ -200,7 +207,8 @@ label
     justify-content: start
     gap: 15px
     font-size: 16px
-
+    span
+        @include second_text
 .genders
     display: flex
     flex-direction: column
