@@ -30,7 +30,7 @@ var app = new Vue({
             this.$validator.validateAll(scope).then((result) => {
                 if (result) {
                     // eslint-disable-next-line
-                    alert('Form Submitted!');
+                    alert('Форма успешно заполнена и все важные поля заполнены!!');
                 }
             });
         }

@@ -307,4 +307,28 @@ label {
   width: 21px;
 }
 
+.btn_submit {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.btn_submit button {
+  border: 2px solid #1e5946;
+  border-radius: 5px;
+  padding: 12px 47px 12px 13px;
+  width: 353px;
+  height: 25px;
+  border-top: none;
+  width: 150px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .btn_submit button {
+    width: 200px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
