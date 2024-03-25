@@ -11,8 +11,7 @@ var app = new Vue({
             passport: false,
         },
         changeActiveButton: {
-            'border-bottom': 'none',
-            'width': '231px',
+            'border-bottom':'none',
             'height': '75px',
         },
         selectedOptions: []

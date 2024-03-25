@@ -3,12 +3,24 @@ $button: rgba(255, 255, 255, 0.05)
 $font-family: "Roboto Mono", sans-serif
 $second-family: "Roboto Flex", sans-serif
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap')
+$mob_max: 480px
+
+
+@mixin mobila
+    @media (max-width: $mob_max)
+        @content    
+
+        
+    
+
 @mixin button-styles
     border: 2px solid #1e5946
     border-radius: 5px
     padding: 12px 47px 12px 13px
     width: 353px
     height: 25px
+    @include mobila
+        width: 200px
 
 @mixin second_text
     font-family: $font-family
@@ -40,6 +52,8 @@ body
         font-weight: 500
         font-size: 16px
         color: rgba(255, 255, 255, 0.9)
+    @include mobila
+        font-size: 14px
 
 input::placeholder
     @include second_text
@@ -51,14 +65,17 @@ label
     display: flex
     justify-content: center
     padding-top: 1%
+
 .forma_main
     display: flex
     justify-content: center
+    width: 600px
+    @include mobila
+        width: 100%
 
 .up_panel
     display: flex
     align-items: flex-end
-    width: 577px
     height: 75px
 
 .you_are
@@ -70,7 +87,7 @@ label
     align-items: center
     justify-content: center
     flex-direction: row
-    width: 167px
+    width: 100%
     height: 54px
 
 .youre_adress
@@ -82,7 +99,7 @@ label
     align-items: center
     justify-content: center
     flex-direction: row
-    width: 231px
+    width: 100%
     height: 54px
 
 .youre_passport
@@ -94,20 +111,20 @@ label
     align-items: center
     justify-content: center
     flex-direction: row
-    width: 163px
+    width: 100%
     height: 54px
 
 .forma_main
     display: flex
     flex-direction: column
+    align-content: center
 .forma
     display: flex
     flex-direction: column
     border-bottom: 3px solid #1e5946
     border-left: 3px solid #1e5946
     border-right: 3px solid #1e5946
-    padding: 51px 29px
-    width: 513px
+    padding: 5%
 
 .three_buttons,.six_buttons,.five_buttons
     display: flex
@@ -126,8 +143,13 @@ label
     justify-content: center
     flex-direction: row
     gap: 20px
+    div
+        display: flex
+        flex-direction: column
     input
         width: 195px
+    @include mobila
+        flex-direction: column    
 
 .form_text
     @include button-styles
@@ -176,7 +198,8 @@ label
     span
         @include second_text
         
-
+    @include mobila
+        flex-direction: column
 .choose_gender
     @include second_text
     display: flex
