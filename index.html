@@ -28,37 +28,45 @@
                     Ваш паспорт
                 </div>
             </div>
+            <form  @submit.prevent="validateForm('form-1')" data-vv-scope="form-1">
             <div class="forma" v-show="activeForma === 'you'">
                 <div class="three_buttons">
                     <div class="youre_name">
                         <label for="name">Ваше Имя</label>
-                        <input type="text" id="name" v-validate="'required'" name="name" placeholder="Введите ваше имя">
-                        <span>{{ errors.first('name') }}</span>
+                        <input type="text" id="name" v-validate="'required|alpha'"name="name" placeholder="Введите ваше имя">
+                        <span v-show="errors.has('form-1.name')" class="help is-danger">{{ errors.first('form-1.name') }}</span>
+                        
                     </div>
                     <div class="youre_surname">
                         <label for="surname">Ваша Фамилия</label>
-                        <input type="text" id="surname" name="surname" placeholder="Введите вашу фамлию">
+                        <input type="text" id="surname" v-validate="'required|alpha'" name="surname" placeholder="Введите вашу фамлию">
+                        <span v-show="errors.has('form-1.surname')" class="help is-danger">{{ errors.first('form-1.surname') }}</span>
                     </div>
                     <div class="youre_bigname">
                         <label for="bigname">Ваше отчество</label>
-                        <input type="text" id="bigname" name="bigname" placeholder="Введите ваше отчество">
+                        <input type="text" id="bigname" v-validate="'alpha'" name="bigname" placeholder="Введите ваше отчество">
+                        <span>{{ errors.first('bigname')}}</span>
+                        <span v-show="errors.has('form-1.bigname')" class="help is-danger">{{ errors.first('form-1.bigname') }}</span>
                     </div>
                 </div>
                 <div class="two_buttons">
                     <div class="youre_birthdate">
                         <label for="date">Введите дату рождения</label>
-                        <input type="date" id="date" name="date" placeholder="Ваша дата рождения">
+                        <input type="date" id="date"  v-validate="'required'" name="line" placeholder="Ваша дата рождения">
+                        <span v-show="errors.has('form-1.line')" class="help is-danger">{{ errors.first('form-1.line') }}</span>
                     </div>
                     <div class="youre_number">
-                        <label for="phone">Ваша номер</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона">
+                        <label for="phone">Ваш номер</label>
+                        <input type="tel" id="phone" v-validate="'required'" name="phone" placeholder="Введите номер телефона">
+                        <span v-show="errors.has('form-1.phone')" class="help is-danger">{{ errors.first('form-1.phone') }}</span>
                     </div>
                 </div>
                 <div class="two_select_buttons">
                     <div class="client_group">
                         <span class="form_text" @click="isVisible = !isVisible">{{selectedLabels || 'Группа клиентов'}}</span>
+                        <span v-show="errors.has('form-1.group')" class="help is-danger">{{ errors.first('form-1.group') }}</span>
                         <div class="multiselect_block" v-show="isVisible">
-                            <select id="select-1" class="field_select" name="technology" multiple
+                            <select id="select-1" class="field_select" v-validate="'required'" name="group" multiple
                                 v-model="selectedOptions">
                                 <option value="OMC">ОМС</option>
                                 <option value="VIP">VIP</option>
@@ -108,13 +116,14 @@
                         <label for="oblast">Ваша область</label>
                         <input type="text" id="oblast" name="oblast" placeholder="Введите вашу область">
                     </div>
-                    <div class="youre_oblast">
+                    <div class="youre_build">
                         <label for="oblast">Ваш дом</label>
                         <input type="text" id="oblast" name="oblast" placeholder="Введите номер дома">
                     </div>
-                    <div class="youre_oblast">
+                    <div class="youre_city">
                         <label for="oblast">Ваш город</label>
-                        <input type="text" id="oblast" name="oblast" placeholder="Введите ваш город">
+                        <input type="text" id="oblast" v-validate = "'required'"  name="city" placeholder="Введите ваш город">
+                        <span v-show="errors.has('form-1.city')" class="help is-danger">{{ errors.first('form-1.city') }}</span>
                     </div>
                     <div class="youre_street">
                         <label for="street">Ваша улица</label>
@@ -134,14 +143,19 @@
                     </div>
                     <div class="by_issued">
                         <label for="by_issued">Кем выдан паспорт</label>
-                        <input type="text" id="by_issued" name="by_issued" placeholder="Введите кем выдан паспорт">
+                        <input type="text" id="by_issued" v-validate="'required'" name="by_issued" placeholder="Введите кем выдан паспорт">
+                       
                     </div>
                     <div class="when_issued">
                         <label for="when_issued">Введите дату выдачи</label>
-                        <input type="date" id="date" name="when_issued">
+                        <input type="date" v-validate="'required'" id="date" name="when_issued">
+                        <span v-show="errors.has('form-1.when_issued')" class="help is-danger">{{ errors.first('form-1.when_issued') }}</span>
                     </div>
                     <div class="attending_physician">
-                        <select id="select-1" class="field_select" name="technology">
+                        <span v-show="errors.has('form-1.issued')" class="help is-danger">{{ errors.first('form-1.issued') }}</span>
+                        <select id="select-1" class="field_select"  v-validate="'required'" name="issued">
+                           
+                            <option selected disabled></option>
                             <option value="doctor1">Паспорт</option>
                             <option value="doctor2">Свидетельство о рождении</option>
                             <option value="doctor3">Вод. Удостоверение</option>
@@ -149,6 +163,8 @@
                     </div>
                 </div>
             </div>
+            <button class="button is-primary" type="submit" name="button">Sign up</button>
+            </form>
         </div>
     </div>
     <script src="node_modules/vue/dist/vue.js"></script>

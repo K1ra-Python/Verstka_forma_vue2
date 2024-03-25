@@ -12,6 +12,11 @@ body {
   font-size: 20px;
   color: #fff;
 }
+body span {
+  font-size: 12px;
+  font-weight: 600;
+  color: red;
+}
 body input {
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid #1e5946;
