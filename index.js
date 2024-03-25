@@ -1,3 +1,5 @@
+import Vue from 'vue';
+import VeeValidate from 'vee-validate';
 Vue.use(VeeValidate); // good to go.
 var app = new Vue({
     el: '#app',
